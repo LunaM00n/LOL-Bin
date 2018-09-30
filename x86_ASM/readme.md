@@ -6,6 +6,12 @@
     ebx = first arg;
     ecx = second arg;
     edx = third arg;
+
+**Quick Sys call table**
+https://syscalls.kernelgrok.com/
+http://shell-storm.org/shellcode/files/syscalls.html
+
+
 **Interrupt**
 
     int 0x80
