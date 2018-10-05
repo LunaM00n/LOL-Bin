@@ -27,6 +27,10 @@ http://shell-storm.org/shellcode/files/syscalls.html
 **Linking with executable**
 
     ld -m elf_i386 -o filename filename.o
+    
+**Checking exit status**
+`echo $?`
+
 **Exercises**
 
  - Exit program to understand system call 
