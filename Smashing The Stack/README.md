@@ -331,7 +331,9 @@ We spawn a shell inside gdb right? What about outside of the gdb?
     Segmentation fault
 **NOP Trick for shellcode reliable**
 We will add \x90 * 40 
+
 we need to edit our eip 
+
 ffffd648+0x14 (20) = ffffd65c
 
 New payload
@@ -364,6 +366,7 @@ what about our eip?
     gdb-peda$ x/8x $eip
     0xffffd65c:     0x00000000      0xffffd680      0x565561e4      0xffffd66c
     0xffffd66c:     0x41414141      0x41414141      0x41414141      0x41414141
+
 Oh ! its `0x00000000` ? What the hell ? Where is the NOP and shellcode?
 
     gdb-peda$ x/32x $eip+0x14
@@ -391,5 +394,13 @@ protostar stack exercises
 
 **Further Reading**
 http://phrack.org/issues/49/14.html
+
 Shell coder Handbook
+
 Hacking : The art of exploitation
+
+**Inspiration**
+https://exploit.courses/#/challenge/11
+
+https://github.com/nnamon/linux-exploitation-course/blob/master/lessons/4_classic_exploitation/lessonplan.md
+
