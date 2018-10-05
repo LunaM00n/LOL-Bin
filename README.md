@@ -1,4 +1,4 @@
-# LOL-RE-101
+# LOL-Bin
 LOL's collections of Reverse Engineering
 
 **Tutorials**
