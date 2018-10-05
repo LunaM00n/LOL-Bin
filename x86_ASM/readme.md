@@ -34,6 +34,11 @@ http://shell-storm.org/shellcode/files/syscalls.html
 **Exercises**
 
  - Exit program to understand system call 
+ ```mov eax,1 -> set exit sys call number (1) to eax register
+  mov ebx,2 -> set first arguments to ebx register
+  int 0x80 -> call interrupt```
+
+
  - Hello World program to understand output,global variables
  - A program to understand comparison , unconditional jump , conditional jump
  - A program to understand loop
