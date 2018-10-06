@@ -147,6 +147,7 @@ it will find ropgadgets
     Unique gadgets found: 7843
 
 **System calls**
+
 If you already learned x86_ASM , you can understand how linux system call work. In this case we want to call execve to execute our new shell `execve('/bin/sh')` . 
 Example
 
@@ -156,6 +157,7 @@ ecx=0
 edx=0
 
 **Generating with ROPgadget**
+
 Command 
 
     ROPgadget --binary nx_0 --ropchain
