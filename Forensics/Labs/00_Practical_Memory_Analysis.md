@@ -1,6 +1,7 @@
 ## Practical Memory Analysis
 ***Descrption***
-I m new to digital forensic and this is my first step .nd noted 
+  
+I m new to digital forensic and this is my first step
 
 ***Requirements***
 
