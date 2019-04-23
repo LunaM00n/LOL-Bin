@@ -5,6 +5,8 @@
 | Name | Category |
 |--|--|
 | [Brain_Gamez](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/CHALLENGES/brain_gamez.md) | File Analysis |
+| [root-me C&C level 2](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/CHALLENGES/root_me_cnc_2.md) | Memory Analysis |
+
 
 **Labs**
 
