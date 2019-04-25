@@ -13,3 +13,17 @@
 | Name | Description |
 |--|--|
 | [Practical Memory Analysis](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/00_Practical_Memory_Analysis.md) | Metasploit Backdoor, Memory Acquistion, Volatility Framework |
+
+**Links**
+
+| Description | Link |
+|--|--|
+| Flare-VM | https://www.fireeye.com/blog/threat-research/2017/07/flare-vm-the-windows-malware.html |
+
+
+**Books**
+
+|Name| Link |
+|--|--|
+| Practical Malware Analysis | https://nostarch.com/malware |
+
