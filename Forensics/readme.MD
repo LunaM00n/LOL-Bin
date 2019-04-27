@@ -1,4 +1,4 @@
-## Contents
+## Forensics 
 
 **Challenges**
 
@@ -26,4 +26,11 @@
 |Name| Link |
 |--|--|
 | Practical Malware Analysis | https://nostarch.com/malware |
+
+**Cheatsheets**
+
+|Name| Link |
+|--|--|
+| Volatility | https://downloads.volatilityfoundation.org/releases/2.4/CheatSheet_v2.4.pdf |
+| Wireshark | https://www.cellstream.com/resources/2013-09-10-11-55-21/cellstream-public-documents/wireshark-related/83-wireshark-display-filter-cheat-sheet/file |
 
