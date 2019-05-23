@@ -13,6 +13,7 @@
 | Name | Description |
 |--|--|
 | [Practical Memory Analysis](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/00_Practical_Memory_Analysis.md) | Metasploit Backdoor, Memory Acquistion, Volatility Framework |
+| [The CFReDS - Hacking Case](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/01_CFReDS_Hacking_Case.md) | Disk Forensics, Registry Forensics, SANS SIFT Workstation, File Forensics
 
 **Links**
 
