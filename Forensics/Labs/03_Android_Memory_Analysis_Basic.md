@@ -531,5 +531,97 @@ hashcat64.exe -m 10 -a 3 ..\..\hash -1 ?l?u?d INS{?1?1?1?1?1} -d 3
 ```
 But my pc can't crack :(
 
+---
+
+### Malware Analysis Tricks
+> Volatility and Memory Analysis with Malware Sample
+
+**Process List**
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_pslist
+```
+**Finding & Extracting a file**
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_find_file -F FILENAME
+```
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_find_file -i INDOE_NUMBER -o extracted.apk
+```
+Listings files and FD from a process
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_lsof -p PID
+```
+**Gathering File from Dentry Cache**
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_dentry_cache | grep 'STRING for FILE'
+```
+**Finding file in Memory from a process**
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_proc_maps -p PID | grep 'FILE1\|FILE2'
+```
+**Dumping File form Memory** 
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_dump_map -p PID -D DUMP_DIRECTROY -s START_MEMORY_ADDRESS
+```
+**Findind a String in Dumped Memory**
+```
+strings -a DUMP_DIRECTORY/*.vmap
+```
+**Finding Original Apk File**
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_dentry_cache | grep '\.apk' | grep 'PACKAGE_NAME' | sort -t\| -k3,3n
+``` 
+**Finding Source for Downloaded apk**
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_dump_map -D DUMP_DIRECTORY
+```
+```
+grep "Downloaded APK File Name" DUMP_DIRECTORY/*
+```
+**Finding Source in Messaging**
+get the messaging app process id
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_pslist
+```
+Single Process
+```
+grep 'apk string' DUMP_DIRECTORY/task.PID.0x*
+```
+Multiple Process
+```
+grep 'apk string' DUMP_DIRECTORY/task.PID.0x* DUMP_DIRECTORY/task.PID.0x*
+```
+If we found in a process , look strings
+```
+strings -a DUMP_DIRECTORY/VMAP_FILE | grep 'apk string'
+```
+**TimeLine Analysis with Dentry Cache**
+Create Timeline 
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_dentry_cache > timeline.sv
+```
+Time line Analysis with package name
+```
+cat timeline.csv | grep 'com.package.name'
+```
+**Command Shell Analysis** 
+```
+vol.py -f filename.mem --profile=Linuxgoldfish-2_6_29ARM linux_bash
+```
+Manually know the heap address of Linux Command Shell pid
+```
+vol.py -f memory.dmp --profile=Linuxgoldfish-2_6_29ARM linux_proc_maps -p PID | grep heap
+```
+dump the heap memory
+```
+vol.py -f memory.dmp --profile=Linuxgoldfish-2_6_29ARM linux_dump_map -p PID -s HEAP_START_ADDRESS
+```
+Analysis heap memory
+```
+strings -a DUMP_DIRECTORY/task.PID.0xHEAPADDRESS.vmap
+```
+
+
+
 Thanks   
 -> http://arishitz.net/writeup-secr3tmgr-forensic-insomnihack-2017/
