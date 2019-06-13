@@ -16,7 +16,7 @@
 | [Practical Memory Analysis](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/00_Practical_Memory_Analysis.md) | Metasploit Backdoor, Memory Acquistion, Volatility Framework |
 | [The CFReDS - Hacking Case](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/01_CFReDS_Hacking_Case.md) | Disk Forensics, Registry Forensics, SANS SIFT Workstation, File Forensics |
 | [Android Memory Forensics](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/03_Android_Memory_Analysis_Basic.md) | Android , LiME, Volaitlity, HashCat |
-| [Network Traffic Analysis - Thread Detection](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/03_Android_Memory_Analysis_Basic.md) | Snort, ET rules, IDS/IPS, Network Miner, File Carving |
+| [Network Traffic Analysis - Thread Detection](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/04_Network_Traffic_Analysis.md) | Snort, ET rules, IDS/IPS, Network Miner, File Carving |
 
 **Links**
 
