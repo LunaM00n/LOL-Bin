@@ -1,4 +1,3 @@
-
 ## Forensics 
 
 **Challenges**
@@ -17,6 +16,7 @@
 | [The CFReDS - Hacking Case](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/01_CFReDS_Hacking_Case.md) | Disk Forensics, Registry Forensics, SANS SIFT Workstation, File Forensics |
 | [Android Memory Forensics](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/03_Android_Memory_Analysis_Basic.md) | Android , LiME, Volaitlity, HashCat |
 | [Network Traffic Analysis - Thread Detection](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/04_Network_Traffic_Analysis.md) | Snort, ET rules, IDS/IPS, Network Miner, File Carving |
+| [Web Server Case](https://github.com/LunaM00n/LOL-Bin/blob/master/Forensics/Labs/05.Web_Server_Case.md) | Web Attacks Analysis, Log Analysis, Source Code Audit, Memory Forensics, File Forensics, Strings Analysis |
 
 **Links**
 
