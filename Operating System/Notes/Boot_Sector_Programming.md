@@ -226,9 +226,47 @@ dw 0xaa55
  
  ```
  
+ Include Files
+ 
+ ```
+ %include "my_print_funcion.asm"
+ ```
+ By using this include files , we can create a neat code for our OS.
+ 
 ### Writing Hello World
 
-soon
+```
+; Hello World Porgram
+
+[org 0x7c00]
+
+xor ax,ax
+cld
+
+mov si,msg
+call bios_print
+
+msg db 'Hello World',13,10,0
+
+bios_print:
+	lodsb ; load string 
+	or al,al ; zero=end of string
+	jz done ; if equal zero
+	mov ah,0x0e
+	mov bh,0
+	int 0x10
+	jmp bios_print
+
+done:
+	ret
+
+
+jmp $
+
+times 510-($-$$) db 0
+dw 0xaa55
+
+```
 
 ### References
  - https://www.youtube.com/playlist?list=PLmlvkUN3-1MNKwINqdCDtTdNDjfBmWcZA - Writing an Operating System
