@@ -235,6 +235,7 @@ dw 0xaa55
  
 ### Writing Hello World
 
+Simple One
 ```
 ; Hello World Porgram
 
@@ -265,6 +266,43 @@ jmp $
 
 times 510-($-$$) db 0
 dw 0xaa55
+
+```
+Using Include for print function
+
+```
+;print_string.asm
+print_string:
+	pusha
+	lodsb
+	or al,al
+	jz done
+	mov ah,0x0e
+	int 0x10
+	jmp print_string
+
+done:
+	ret
+
+```
+and boot.asm 
+```
+; Hello World Porgram
+
+[org 0x7c00]
+mov si,msg
+call print_string
+
+%include "print_string.asm"
+
+msg db 'Hello World',13,10,0
+
+
+jmp $
+
+times 510-($-$$) db 0
+dw 0xaa55
+
 
 ```
 
