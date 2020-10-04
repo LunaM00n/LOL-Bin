@@ -19,5 +19,8 @@ I would like to use following pcap files
 
 https://wiki.wireshark.org/DisplayFilters
 
+- tcp.port eq 23
+- ip.dst eq 192.168.0.1
+- ip.dst ne 192.168.0.1
 
 
